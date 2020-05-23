@@ -1,0 +1,107 @@
+{% extends "firm/base.html" %}
+{% block LeftPanel %}
+
+    <li><a href="/firm/project/"><i class="icon-interface-windows"></i>管理</a></li>
+    <li><a href="/firm/salary/"> <i class="icon-home"></i>工资发放 </a></li>
+    <li><a href="/firm/set/"> <i class="icon-grid"></i>设置 </a></li>
+{% endblock %}
+{% block MainPanel %}
+
+    <div class="btn-group pro" role="group" aria-label="...">
+        <button type="button" class="btn btn-default btn-lg">项目信息</button>
+        <button type="button" class="btn btn-default btn-lg">人员信息</button>
+    </div>
+    <div class="information container">
+        <!-- 项目信息-->
+        <div class="show proinf col-lg-10">
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>项目名</th>
+                            <th>项目地址</th>
+                            <th>项目简述</th>
+                            <th>负责人编号</th>
+                            <th>开始时间</th>
+                            <th>截止时间</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for project in projects %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>{{ project.name }}</td>
+                                <td>{{ project.address }}</td>
+                                <td>{{ project.description }}</td>
+                                <td>{{ project.bossid }}</td>
+                                <td>{{ project.begintime|date:"Y-m-d" }}</td>
+                                <td>{{ project.endtime|date:"Y-m-d" }}</td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--  人员信息-->
+        <div class="staffInf">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>身份证号</th>
+                            <th>所属部门</th>
+                            <th>家庭住址</th>
+                            <th>电话号码</th>
+                            <th>员工编号</th>
+                            <th>入职时间</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for user in userlist %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>{{ user.name }}</td>
+                                <td>{{ user.gender }}</td>
+                                <td>{{ user.idcard }}</td>
+                                <td>{{ user.department.name }}</td>
+                                <td>{{ user.address }}</td>
+                                <td>{{ user.tel }}</td>
+                                <td>{{ user.userid }}</td>
+                                <td>{{ user.create_time|date:"Y-m-d" }}</td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="/static/jquery/jquery-3.4.1.js"></script>
+    <script>
+        $("#pro1").click(function () {
+            $.ajax({
+                url: "",
+                type: "post",
+                data: {
+                    msg: "proj1",
+                },
+                success: function (data) {
+                    console.log(data)
+                }
+            })
+        })
+    </script>
+{% endblock %}

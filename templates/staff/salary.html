@@ -1,0 +1,103 @@
+{% extends "staff/base.html" %}
+{% block LeftPanel %}
+    <li><a href="/staff/monitor/"> <i class="fa fa-pencil"></i>监督</a></li>
+    <li  class="active"><a href="/staff/salary/"> <i class="fa fa-laptop"></i>工资</a></li>
+    <li><a href="/staff/inform/"> <i class="fa fa-list-ul"></i>通知</a></li>
+    <li><a href="/staff/set/"> <i class="fa fa-gear"></i>设置 </a></li>
+{% endblock %}
+{% block MainPanel %}
+    <div class="salary">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- info-->
+                <div class="salaryInfo col-lg-5">
+                    <div class="card">
+                        <div class="card-close">
+                            <div class="dropdown">
+                                <button type="button" id="closeCard1" class="edit"><i class="fa fa-gear"></i>编辑</button>
+                            </div>
+                        </div>
+                        <div class="card-header ">
+                            <h3 class="h4">{{ salary.releasedate|date:"Y-m-d" }}</h3>
+                        </div>
+                        <div class="card-body no-padding">
+                            <!-- Item-->
+                            <div class=" number text-center">
+                                {{ salary.finalsalary }}元
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>基本薪资</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ salary.basicsalary }}元</div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>病事假</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ salary.sickleave }}天</div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>社保</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ salary.socialsecurity }}元</div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>五险一金</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ salary.insurances }}元</div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>个税</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ salary.tax }}元</div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>罚款</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ salary.publishment }}元</div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>奖励</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ salary.performance }}元</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btns col-lg-5">
+                    <button class="btn btn-default">确认无误</button>
+                    <button class="btn btn-default">信息有误</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

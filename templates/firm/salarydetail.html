@@ -1,0 +1,64 @@
+{% extends "firm/base.html" %}
+{% block LeftPanel %}
+    <li><a href="/firm/project/"><i class="icon-interface-windows"></i>管理</a></li>
+    <li class="active"><a href="/firm/salary/"> <i class="icon-home"></i>工资发放 </a></li>
+    <li><a href="/firm/set/"> <i class="icon-grid"></i>设置 </a></li>
+{% endblock %}
+
+{% block MainPanel %}
+    <div class="container">
+        <div class="salaryInfo col-lg-12">
+            <div class="card col-lg-12">
+                <div class="card-close">
+                    <div class="dropdown">
+                        <button type="button" id="closeCard1" class="edit"><i class="fa fa-gear"></i>编辑</button>
+                    </div>
+                </div>
+                <div class="card-header d-flex align-items-center">
+                    <h3 class="h4">工资表</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>姓名</th>
+                                <th>项目名</th>
+                                <th>身份证号</th>
+                                <th>基本工资</th>
+                                <th>病事假</th>
+                                <th>社保</th>
+                                <th>个税</th>
+                                <th>五险一金</th>
+                                <th>罚款</th>
+                                <th>奖励</th>
+                                <th>实发金额</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for salary in salaryinfos %}
+                                <tr>
+                                    <th scope="row">{{ forloop.counter }}</th>
+                                    <td>{{ salary.user.name }}</td>
+                                    <td>{{ salary.user.department.name }}</td>
+                                    <td>{{ salary.user.idcard }}</td>
+                                    <td>{{ salary.basicsalary }}</td>
+                                    <td>{{ salary.sickleave }}</td>
+                                    <td>{{ salary.socialsecurity }}</td>
+                                    <td>{{ salary.tax }}</td>
+                                    <td>{{ salary.insurances }}</td>
+                                    <td>{{ salary.publishment }}</td>
+                                    <td>{{ salary.performance }}</td>
+                                    <td>{{ salary.finalsalary }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+{#            <button class="col-sm-3 next btn btn-default">发送</button>#}
+        </div>
+    </div>
+{% endblock %}

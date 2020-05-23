@@ -1,0 +1,52 @@
+{% extends "firm/base.html" %}
+{% block LeftPanel %}
+
+    <li><a href="/firm/project/"><i class="icon-interface-windows"></i>管理</a></li>
+    <li class="active"><a href="/firm/salary/"> <i class="icon-home"></i>工资发放 </a></li>
+    <li><a href="/firm/set/"> <i class="icon-grid"></i>设置 </a></li>
+
+{% endblock %}
+
+{% block MainPanel %}
+    <div class="container">
+        <div class="salary col-lg-5">
+            <div class="card">
+                <div class="row">
+                    <label class="col-sm-3 form-control-label">发薪类型</label>
+                    <div class="col-sm-9">
+                        <select name="account" class="form-control">
+                            <option>薪资</option>
+{#                            <option>年终奖</option>#}
+{#                            <option>罚款</option>#}
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-sm-3 form-control-label">发薪时间</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="salarydate">
+                    </div>
+                </div>
+            </div>
+            <button class=" next btn btn-default" id="nextstep">下一步</button>
+        </div>
+    </div>
+
+    <script src="/static/jquery/jquery-3.4.1.js"></script>
+    <script>
+    $("#nextstep").click(function () {
+        $.ajax({
+            url:"",
+            type:"post",
+            data:{
+                date:$("#salarydate").val(),
+            },
+            success:function (data) {
+                alert("查询成功");
+                location.href="/firm/salarydetail/"
+            }
+        })
+    })
+    </script>
+
+{% endblock %}

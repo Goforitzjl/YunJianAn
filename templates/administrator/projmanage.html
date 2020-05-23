@@ -1,0 +1,313 @@
+{% extends "administrator/base.html" %}
+
+{% block LeftPanel %}
+    <li class="active"><a href="/administrator/projmanage/"> <i class="fa fa-pencil"></i>项目管理</a></li>
+    <li><a href="/administrator/staffmonitor/"> <i class="fa fa-laptop"></i>员工监督</a></li>
+     <li ><a href="/administrator/reportInfo/"> <i class="fa fa-laptop"></i>举报信息</a></li>
+    <li><a href="/administrator/staffmanage/"> <i class="fa fa-list-ul"></i>员工管理</a></li>
+{#    <li><a href="/administrator/check/"> <i class="fa fa-gear"></i>校验 </a>#}
+    <li><a href="/administrator/set/"> <i class="fa fa-gear"></i>设置 </a>
+
+{% endblock %}
+
+{% block MainPanel %}
+    <div class="btn-group pro" role="group" aria-label="...">
+        <button type="button" class="btn btn-default btn-lg">项目信息</button>
+        <button type="button" class="btn btn-default btn-lg">部门信息</button>
+        <button type="button" class="btn btn-default btn-lg">实时监测</button>
+    </div>
+    <div class="information container">
+        <!-- 项目信息-->
+        <div class="show proinf col-lg-10">
+            <div class="card">
+{#                <div class="card-close">#}
+{#                    <div class="dropdown">#}
+{#                        <button type="button" id="closeCard1" class="edit"><i class="fa fa-gear"></i>编辑</button>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="card-header">
+                    <h3 class="h4">项目信息</h3>
+                </div>
+                <div class="card-body no-padding">
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>项目名称</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ project.name }}</div>
+                    </div>
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>项目信息</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ project.description }}</div>
+                    </div>
+                    <!-- Item-->
+{#                    <div class="item d-flex justify-content-between">#}
+{#                        <div class="info d-flex">#}
+{#                            <div class="title">#}
+{#                                <h5>项目ID</h5>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="info text-right">888888</div>#}
+{#                    </div>#}
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>管理员ID</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ userinfo.userid }}</div>
+                    </div>
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>项目地址</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ projectplace.address }}</div>
+                    </div>
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>开始日期</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ project.begintime|date:"Y-m-d" }}</div>
+                    </div>
+
+                            <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>结束日期</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ project.endtime|date:"Y-m-d" }}</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 部门信息-->
+        <div class="departInf col-lg-10">
+            <div class="row">
+                <div class="departlist col-lg-4">
+                    <div class="card">
+                        <ul class="list-unstyled">
+{#                            <li><a href="#" id="department1">部门一</a></li>#}
+{#                            <li><a href="#" id="department2">部门二</a></li>#}
+{#                            <li><a href="#" id="department3">部门三</a></li>#}
+
+                            <li><button id="department1" type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom: 10px">部门一</button></li>
+                            <li><button id="department2" type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom: 10px">部门二</button></li>
+                            <li><button id="department3" type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom: 10px">部门三</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="departmsg col-lg-8">
+                    <div class="card">
+                        <div class="card-close">
+                            <div class="dropdown">
+                                <button type="button" id="closeCard2" class="edit"><i class="fa fa-gear"></i>编辑</button>
+                            </div>
+                        </div>
+                        <div class="card-header">
+                            <h3 class="h4">部门信息</h3>
+                        </div>
+                        <div class="card-body no-padding">
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>部门名称</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right"><span id="dname">{{ department.name }}</span></div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>部门ID</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right"><span id="did">{{ department.departmentid }}</span></div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>负责人姓名</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right"><span id="dboss">{{ department.bossname }}</span></div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>部门负责人类型</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">管理员</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 实时监测-->
+        <div class="monitor col-lg-8">
+            <div class="play card">
+                <div class="monitorInfo">
+                    <p>总人数：</p>
+                    <p>未佩戴人数：</p>
+                    <p>日期：</p>
+                </div>
+            </div>
+            <div class="site">
+                <div class="card">
+                    <div class="row">
+                        <div class="sitePic col-sm-6"><img src="" alt=""></div>
+                        <div class="siteInfo col-sm-6">
+                            <div class="card-body">
+                                <!-- Item-->
+                                <div class="item d-flex justify-content-between">
+                                    <div class="info d-flex">
+                                        <div class="title">
+                                            <h5>场地名称</h5>
+                                        </div>
+                                    </div>
+                                    <div class="info text-right">云简安</div>
+                                </div>
+                                <!-- Item-->
+                                <div class="item d-flex justify-content-between">
+                                    <div class="info d-flex">
+                                        <div class="title">
+                                            <h5>场地ID</h5>
+                                        </div>
+                                    </div>
+                                    <div class="info text-right">XXXXXXXXX</div>
+                                </div>
+                                <!-- Item-->
+                                <div class="item d-flex justify-content-between">
+                                    <div class="info d-flex">
+                                        <div class="title">
+                                            <h5>所属项目</h5>
+                                        </div>
+                                    </div>
+                                    <div class="info text-right">XXXXXX</div>
+                                </div>
+                                <!-- Item-->
+                                <div class="item d-flex justify-content-between">
+                                    <div class="info d-flex">
+                                        <div class="title">
+                                            <h5>责任人</h5>
+                                        </div>
+                                    </div>
+                                    <div class="info text-right">XXXXXX</div>
+                                </div>
+                                <!-- Item-->
+                                <div class="item d-flex justify-content-between">
+                                    <div class="info d-flex">
+                                        <div class="title">
+                                            <h5>场地地址</h5>
+                                        </div>
+                                    </div>
+                                    <div class="info text-right">XXXXXXXXX</div>
+                                </div>
+                                <!-- Item-->
+                                <div class="item d-flex justify-content-between">
+                                    <div class="info d-flex">
+                                        <div class="title">
+                                            <h5>摄像头ID</h5>
+                                        </div>
+                                    </div>
+                                    <div class="info text-right">666666</div>
+                                </div>
+                                <div class="item d-flex justify-content-between">
+                                    <div class="info d-flex">
+                                        <div class="title">
+                                            <h5>场地详情</h5>
+                                        </div>
+                                    </div>
+                                    <div class="info text-right">XXXXXX</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="person">
+                <div class="articles card">
+                    <div class="card-header d-flex align-items-center">
+                        <h2 class="h3">未佩戴人员信息</h2>
+                    </div>
+                    <div class="card-body no-padding">
+                        <div class="item d-flex align-items-center">
+                            <div class="image"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle">
+                            </div>
+                            <div class="text"><a href="#">
+                                <h3 class="h5">姓名</h3></a>
+                                <small>id</small>
+                                </br>
+                                <small>所属部门</small>
+                            </div>
+                        </div>
+                        <div class="item d-flex align-items-center">
+                            <div class="image"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle">
+                            </div>
+                            <div class="text"><a href="#">
+                                <h3 class="h5">姓名</h3></a>
+                                <small>id</small>
+                                </br>
+                                <small>所属部门</small>
+                            </div>
+                        </div>
+                        <div class="item d-flex align-items-center">
+                            <div class="image"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle">
+                            </div>
+                            <div class="text"><a href="#">
+                                <h3 class="h5">姓名</h3></a>
+                                <small>id</small>
+                                </br>
+                                <small>所属部门</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="/static/jquery/jquery-3.4.1.js"></script>
+    <script>
+
+    $("#department1").click(function () {
+        $("#dname").text("{{ departmentslist.0.name }}");
+        $("#did").text("{{ departmentslist.0.departmentid }}");
+        $("#dboss").text("{{ departmentslist.0.bossname }}");
+    });
+
+    $("#department2").click(function () {
+           $("#dname").text("{{ departmentslist.1.name }}");
+        $("#did").text("{{ departmentslist.1.departmentid }}");
+        $("#dboss").text("{{ departmentslist.1.bossname }}");
+    })
+
+    $("#department3").click(function () {
+           $("#dname").text("{{ departmentslist.2.name }}");
+        $("#did").text("{{ departmentslist.2.departmentid }}");
+        $("#dboss").text("{{ departmentslist.2.bossname }}");
+    })
+
+    </script>
+{% endblock %}

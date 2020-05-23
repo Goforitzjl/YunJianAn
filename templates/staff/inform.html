@@ -1,0 +1,81 @@
+{% extends "staff/base.html" %}
+
+{% block LeftPanel %}
+    <li><a href="/staff/monitor/"> <i class="fa fa-pencil"></i>监督</a></li>
+    <li  ><a href="/staff/salary/"> <i class="fa fa-laptop"></i>工资</a></li>
+    <li class="active"><a href="/staff/inform/"> <i class="fa fa-list-ul"></i>通知</a></li>
+    <li><a href="/staff/set/"> <i class="fa fa-gear"></i>设置 </a></li>
+{% endblock %}
+{% block MainPanel%}
+                <div class="news col-lg-10">
+                    <div class="recent-updates card">
+                        <div class="card-close">
+                            <div class="dropdown">
+                                <button type="button" id="closeCard2" class="edit"> <i class="fa fa-gear"></i>编辑</button>
+                            </div>
+                        </div>
+                        <div class="card-header">
+                            <h3 class="h4">消息栏</h3>
+                        </div>
+                        <div class="card-body no-padding">
+                            <!-- Item-->
+                            {% for notice in notices %}
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="icon"><i class="icon-rss-feed"></i></div>
+                                    <div class="title">
+                                        <h5>{{notice.msg}}</h5>
+                                    </div>
+                                </div>
+                                <div class="date text-right"><span>{{ notice.create_date|date:"Y-m-d" }}</span></div>
+                            </div>
+                            {% endfor %}
+
+                            <!-- Item-->
+{#                            <div class="item d-flex justify-content-between">#}
+{#                                <div class="info d-flex">#}
+{#                                    <div class="icon"><i class="icon-rss-feed"></i></div>#}
+{#                                    <div class="title">#}
+{#                                        <h5>Lorem ipsum dolor sit amet.</h5>#}
+{#                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="date text-right"><strong>24</strong><span>May</span></div>#}
+{#                            </div>#}
+                            <!-- Item        -->
+{#                            <div class="item d-flex justify-content-between">#}
+{#                                <div class="info d-flex">#}
+{#                                    <div class="icon"><i class="icon-rss-feed"></i></div>#}
+{#                                    <div class="title">#}
+{#                                        <h5>Lorem ipsum dolor sit amet.</h5>#}
+{#                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="date text-right"><strong>24</strong><span>May</span></div>#}
+{#                            </div>#}
+                            <!-- Item-->
+{#                            <div class="item d-flex justify-content-between">#}
+{#                                <div class="info d-flex">#}
+{#                                    <div class="icon"><i class="icon-rss-feed"></i></div>#}
+{#                                    <div class="title">#}
+{#                                        <h5>Lorem ipsum dolor sit amet.</h5>#}
+{#                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="date text-right"><strong>24</strong><span>May</span></div>#}
+{#                            </div>#}
+                            <!-- Item-->
+{#                            <div class="item d-flex justify-content-between">#}
+{#                                <div class="info d-flex">#}
+{#                                    <div class="icon"><i class="icon-rss-feed"></i></div>#}
+{#                                    <div class="title">#}
+{#                                        <h5>Lorem ipsum dolor sit amet.</h5>#}
+{#                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="date text-right"><strong>24</strong><span>May</span></div>#}
+{#                            </div>#}
+                        </div>
+                    </div>
+                </div>
+{% endblock %}

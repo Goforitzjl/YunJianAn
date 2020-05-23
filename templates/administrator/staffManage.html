@@ -1,0 +1,415 @@
+{% extends "administrator/base.html" %}
+
+{% block LeftPanel %}
+    <li><a href="/administrator/projmanage/"> <i class="fa fa-pencil"></i>项目管理</a></li>
+    <li><a href="/administrator/staffmonitor/"> <i class="fa fa-laptop"></i>员工监督</a></li>
+     <li ><a href="/administrator/reportInfo/"> <i class="fa fa-laptop"></i>举报信息</a></li>
+    <li class="active"><a href="/administrator/staffmanage/"> <i class="fa fa-list-ul"></i>员工管理</a></li>
+    {#    <li><a href="/administrator/check/"> <i class="fa fa-gear"></i>校验 </a>#}
+    <li><a href="/administrator/set/"> <i class="fa fa-gear"></i>设置 </a>
+{% endblock %}
+
+{% block MainPanel %}
+
+    <div class="btn-group pro" role="group" aria-label="...">
+        <button type="button" class="btn btn-default btn-lg">员工列表</button>
+        {#        <button type="button" class="btn btn-default btn-lg">员工考勤</button>#}
+        <button type="button" class="btn btn-default btn-lg">通知</button>
+        <button type="button" class="btn btn-default btn-lg">消息</button>
+    </div>
+    <div class="information container">
+        <!-- 员工列表-->
+        <div class="staffInf show">
+            <div class="row">
+                <div class="stafflist col-lg-4">
+                    <div class="btns col-lg-12">
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <ul class="list-unstyled">
+
+
+                            <li><a href="#department1" aria-expanded="false" data-toggle="collapse"> <i
+                                    class="icon-interface-windows"></i>部门一</a>
+                                <ul id="department1" class="collapse list-unstyled ">
+
+                                    {#                                        <button id="abc" style="width: 360px" type="button">员工1</button>#}
+                                    <li>
+                                        <button class="btn btn-primary btn-lg btn-block" id="1-1"
+                                                style="width: 360px;background-color: rgba(128,128,128,0.5);margin-bottom: 10px">
+                                            员工1
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button id="1-2" class="btn btn-primary btn-lg btn-block"
+                                                style="width: 360px;background-color: rgba(128,128,128,0.5);margin-bottom: 10px">
+                                            员工2
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button id="1-3" class="btn btn-primary btn-lg btn-block"
+                                                style="width: 360px;background-color: rgba(128,128,128,0.5);margin-bottom: 10px">
+                                            员工3
+                                        </button>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li><a href="#department2" aria-expanded="false" data-toggle="collapse"> <i
+                                    class="icon-interface-windows"></i>部门二</a>
+                                <ul id="department2" class="collapse list-unstyled ">
+                                    <li>
+                                        <button id="2-1" class="btn btn-primary btn-lg btn-block"
+                                                style="width: 360px;background-color: rgba(128,128,128,0.5);margin-bottom: 10px">
+                                            员工1
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button id="2-2" class="btn btn-primary btn-lg btn-block"
+                                                style="width: 360px;background-color: rgba(128,128,128,0.5);margin-bottom: 10px">
+                                            员工2
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button id="2-3" class="btn btn-primary btn-lg btn-block"
+                                                style="width: 360px;background-color: rgba(128,128,128,0.5);margin-bottom: 10px">
+                                            员工3
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#department3" aria-expanded="false" data-toggle="collapse"> <i
+                                    class="icon-interface-windows"></i>部门二</a>
+                                <ul id="department3" class="collapse list-unstyled ">
+                                    <li>
+                                        <button id="3-1" class="btn btn-primary btn-lg btn-block"
+                                                style="width: 360px;background-color: rgba(128,128,128,0.5);margin-bottom: 10px">
+                                            员工1
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button id="3-2" class="btn btn-primary btn-lg btn-block"
+                                                style="width: 360px;background-color: rgba(128,128,128,0.5);margin-bottom: 10px">
+                                            员工2
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button id="3-3" class="btn btn-primary btn-lg btn-block"
+                                                style="width: 360px;background-color: rgba(128,128,128,0.5);margin-bottom: 10px">
+                                            员工3
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="staffmsg col-lg-8">
+                    <div class="card">
+                        {#                        <div class="card-close">#}
+                        {#                            <div class="dropdown">#}
+                        {#                                <button type="button" id="closeCard1" class="edit"><i class="fa fa-gear"></i>编辑</button>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+                        <div class="card-header">
+                            <img src="" alt="">
+                        </div>
+                        <div class="card-body no-padding">
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>姓名</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right" id="username"></div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>ID</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right" id="userid"></div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>性别</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right" id="usergender">888888</div>
+                            </div>
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>所属部门</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right" id="did"></div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>入职时间</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right" id="intime"></div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>信息录入人</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right" id="introducer"></div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>工资卡号</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right" id="salaryid"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 通知-->
+        <div class="inform col-lg-8">
+            <div class="con card">
+                <textarea class="form-control" rows="5" id="noticeinfo"></textarea>
+            </div>
+            <div class="btns col-lg-12">
+                <button class="btn btn-default" type="button" id="noticeclear">清空</button>
+                <button class="btn btn-default" type="button" id="noticesubmit">发送</button>
+            </div>
+        </div>
+        <!-- 消息-->
+        <div class="news col-lg-10">
+            <div class="recent-updates card">
+                <div class="card-close">
+                    <div class="dropdown">
+                        <button type="button" id="closeCard2" class="edit"><i class="fa fa-gear"></i>编辑</button>
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h3 class="h4">消息栏</h3>
+                </div>
+                <div class="card-body no-padding">
+                    <!-- Item-->
+                    {% for notice in notices %}
+                        <div class="item d-flex justify-content-between">
+                            <div class="info d-flex">
+                                <div class="icon"><i class="icon-rss-feed"></i></div>
+                                <div class="title">
+                                    <h5>{{ notice.msg }}</h5>
+                                </div>
+                            </div>
+                            <div class="date text-right"><span>{{ notice.create_date|date:"Y-m-d" }}</span></div>
+                        </div>
+                    {% endfor %}
+
+                    <!-- Item-->
+                    {#                            <div class="item d-flex justify-content-between">#}
+                    {#                                <div class="info d-flex">#}
+                    {#                                    <div class="icon"><i class="icon-rss-feed"></i></div>#}
+                    {#                                    <div class="title">#}
+                    {#                                        <h5>Lorem ipsum dolor sit amet.</h5>#}
+                    {#                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                                <div class="date text-right"><strong>24</strong><span>May</span></div>#}
+                    {#                            </div>#}
+                    <!-- Item        -->
+                    {#                            <div class="item d-flex justify-content-between">#}
+                    {#                                <div class="info d-flex">#}
+                    {#                                    <div class="icon"><i class="icon-rss-feed"></i></div>#}
+                    {#                                    <div class="title">#}
+                    {#                                        <h5>Lorem ipsum dolor sit amet.</h5>#}
+                    {#                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                                <div class="date text-right"><strong>24</strong><span>May</span></div>#}
+                    {#                            </div>#}
+                    <!-- Item-->
+                    {#                            <div class="item d-flex justify-content-between">#}
+                    {#                                <div class="info d-flex">#}
+                    {#                                    <div class="icon"><i class="icon-rss-feed"></i></div>#}
+                    {#                                    <div class="title">#}
+                    {#                                        <h5>Lorem ipsum dolor sit amet.</h5>#}
+                    {#                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                                <div class="date text-right"><strong>24</strong><span>May</span></div>#}
+                    {#                            </div>#}
+                    <!-- Item-->
+                    {#                            <div class="item d-flex justify-content-between">#}
+                    {#                                <div class="info d-flex">#}
+                    {#                                    <div class="icon"><i class="icon-rss-feed"></i></div>#}
+                    {#                                    <div class="title">#}
+                    {#                                        <h5>Lorem ipsum dolor sit amet.</h5>#}
+                    {#                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed.</p>#}
+                    {#                                    </div>#}
+                    {#                                </div>#}
+                    {#                                <div class="date text-right"><strong>24</strong><span>May</span></div>#}
+                    {#                            </div>#}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/static/jquery/jquery-3.4.1.js"></script>
+    <script>
+
+        $("#1-1").click(function () {
+            {#alert("{{ userdict1.0.name }}");#}
+            {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
+            $("#username").text("{{ userdict1.0.name }}");
+            $("#userid").text("{{ userdict1.0.userid }}");
+            $("#usergender").text("{{ userdict1.0.gender }}");
+            $('#did').text("{{ userdict1.0.department_id }}");
+            $("#intime").text("{{ userdict1.0.create_time |date:"Y-m-d"}}");
+            $("#introducer").text("{{ userdict1.0.introducerid }}");
+            $("#salaryid").text("{{ userdict1.0.salaryid }}");
+        });
+
+        $("#1-2").click(function () {
+            {#alert("{{ userdict1.0.name }}");#}
+            {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
+            $("#username").text("{{ userdict1.1.name }}");
+            $("#userid").text("{{ userdict1.1.userid }}");
+            $("#usergender").text("{{ userdict1.1.gender }}");
+            $('#did').text("{{ userdict1.1.department_id }}");
+            $("#intime").text("{{ userdict1.1.create_time |date:"Y-m-d"}}");
+            $("#introducer").text("{{ userdict1.1.introducerid }}");
+            $("#salaryid").text("{{ userdict1.1.salaryid }}");
+        });
+
+        $("#1-3").click(function () {
+            {#alert("{{ userdict1.0.name }}");#}
+            {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
+            $("#username").text("{{ userdict1.2.name }}");
+            $("#userid").text("{{ userdict1.2.userid }}");
+            $("#usergender").text("{{ userdict1.2.gender }}");
+            $('#did').text("{{ userdict1.2.department_id }}");
+            $("#intime").text("{{ userdict1.2.create_time |date:"Y-m-d"}}");
+            $("#introducer").text("{{ userdict1.2.introducerid }}");
+            $("#salaryid").text("{{ userdict1.2.salaryid }}");
+        });
+        $("#2-1").click(function () {
+            {#alert("{{ userdict1.0.name }}");#}
+            {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
+            $("#username").text("{{ userdict2.0.name }}");
+            $("#userid").text("{{ userdict2.0.userid }}");
+            $("#usergender").text("{{ userdict2.0.gender }}");
+            $('#did').text("{{ userdict2.0.department_id }}");
+            $("#intime").text("{{ userdict2.0.create_time |date:"Y-m-d"}}");
+            $("#introducer").text("{{ userdict2.0.introducerid }}");
+            $("#salaryid").text("{{ userdict2.0.salaryid }}");
+        });
+
+        $("#2-2").click(function () {
+            {#alert("{{ userdict1.0.name }}");#}
+            {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
+            $("#username").text("{{ userdict2.1.name }}");
+            $("#userid").text("{{ userdict2.1.userid }}");
+            $("#usergender").text("{{ userdict2.1.gender }}");
+            $('#did').text("{{ userdict2.1.department_id }}");
+            $("#intime").text("{{ userdict2.1.create_time |date:"Y-m-d"}}");
+            $("#introducer").text("{{ userdict2.1.introducerid }}");
+            $("#salaryid").text("{{ userdict2.1.salaryid }}");
+        });
+
+        $("#2-3").click(function () {
+            {#alert("{{ userdict1.0.name }}");#}
+            {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
+            $("#username").text("{{ userdict2.2.name }}");
+            $("#userid").text("{{ userdict2.2.userid }}");
+            $("#usergender").text("{{ userdict2.2.gender }}");
+            $('#did').text("{{ userdict2.2.department_id }}");
+            $("#intime").text("{{ userdict2.2.create_time |date:"Y-m-d"}}");
+            $("#introducer").text("{{ userdict2.2.introducerid }}");
+            $("#salaryid").text("{{ userdict2.2.salaryid }}");
+        });
+
+        $("#3-1").click(function () {
+            {#alert("{{ userdict1.0.name }}");#}
+            {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
+            $("#username").text("{{ userdict3.0.name }}");
+            $("#userid").text("{{ userdict3.0.userid }}");
+            $("#usergender").text("{{ userdict3.0.gender }}");
+            $('#did').text("{{ userdict3.0.department_id }}");
+            $("#intime").text("{{ userdict3.0.create_time |date:"Y-m-d"}}");
+            $("#introducer").text("{{ userdict3.0.introducerid }}");
+            $("#salaryid").text("{{ userdict3.0.salaryid }}");
+        });
+
+        $("#3-2").click(function () {
+            {#alert("{{ userdict1.0.name }}");#}
+            {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
+            $("#username").text("{{ userdict3.1.name }}");
+            $("#userid").text("{{ userdict3.1.userid }}");
+            $("#usergender").text("{{ userdict3.1.gender }}");
+            $('#did').text("{{ userdict3.1.department_id }}");
+            $("#intime").text("{{ userdict3.1.create_time |date:"Y-m-d"}}");
+            $("#introducer").text("{{ userdict3.1.introducerid }}");
+            $("#salaryid").text("{{ userdict3.1.salaryid }}");
+        });
+
+              $("#3-3").click(function () {
+            {#alert("{{ userdict1.0.name }}");#}
+            {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
+            $("#username").text("{{ userdict3.2.name }}");
+            $("#userid").text("{{ userdict3.2.userid }}");
+            $("#usergender").text("{{ userdict3.2.gender }}");
+            $('#did').text("{{ userdict3.2.department_id }}");
+            $("#intime").text("{{ userdict3.2.create_time |date:"Y-m-d"}}");
+            $("#introducer").text("{{ userdict3.2.introducerid }}");
+            $("#salaryid").text("{{ userdict3.2.salaryid }}");
+        });
+        $("#noticeclear").click(function () {
+            $("#noticeinfo").val("")
+        });
+
+        $("#noticesubmit").click(function () {
+            $.ajax({
+                url: "",
+                type: "post",
+                data: {
+                    noticeinfo: $("#noticeinfo").val()
+                },
+                success: function (data) {
+
+                    if (data.msg) {
+                        alert("发送成功")
+                    } else {
+                        alert("发送失败")
+                    }
+                }
+            })
+        });
+    </script>
+    {##}
+    {#    <script>#}
+    {##}
+    {##}
+    {#        $("#test").click(function () {#}
+    {#            alert("test")#}
+    {#        });#}
+    {#    </script>#}
+
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "staff/base.html" %}
+{% block LeftPanel %}
+    <li class="active"><a href="/staff/monitor/"> <i class="fa fa-pencil"></i>监督</a></li>
+    <li><a href="/staff/salary/"> <i class="fa fa-laptop"></i>工资</a></li>
+    <li><a href="/staff/inform/"> <i class="fa fa-list-ul"></i>通知</a></li>
+    <li><a href="/staff/set/"> <i class="fa fa-gear"></i>设置 </a></li>
+{% endblock %}
+
+
+{% block MainPanel %}
+    <div class="breadcrumb-holder container-fluid">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item">首页</li>
+            <li class="breadcrumb-item active">员工监督</li>
+        </ul>
+    </div>
+    <!-- Dashboard Counts Section-->
+    <div class="staffMonitor">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Image-->
+                <div class="staffMonitorImg col-lg-6">
+                    <div class="card" id="monitorlabelcard">
+                        <label for="monitorImg" style="position: absolute;left: 132px;top: 20px"> <img width="250" height="250" id="monitorlabel"
+                                                                                                       src="/media/MonitorImg/upPicture.png" alt="加载失败">
+                        </label>
+                        <input type="file" id="monitorImg" style="display: none">
+
+                    </div>
+                </div>
+                <!-- Info -->
+                <div class="staffMonitorInfo col-lg-6">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center">
+                            <h3 class="h4">提交信息</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal">
+                                {% csrf_token %}
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label" for="reporteduser">举报人员姓名</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="reporteduser">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label" for="placename">场地名称</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="placename">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label" for="placeid">场地ID</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="placeid">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label" for="reporttime">时间</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="reporttime">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label" for="reportuser">提交人员</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="reportuser">
+                                    </div>
+                                </div>
+                                <div class="line"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn col-lg-12">
+            <button class="btn btn-default" id="submit">提交</button>
+        </div>
+    </div>
+
+    <script src="/static/jquery/jquery-3.4.1.js"></script>
+    <script>
+        $("#monitorImg").change(function () {
+
+            let file_obj = $(this)[0].files[0];
+            let reader = new FileReader();
+            reader.readAsDataURL(file_obj);
+            reader.onload = function () {
+                $("#monitorlabel").attr("src", reader.result)
+            };
+
+        });
+
+        $("#submit").click(function () {
+            let form = new FormData();
+            form.append("reporteduser", $("#reportuser").val());
+            form.append("placename", $("#placename").val());
+            form.append("placeid", $("#placeid").val());
+            form.append("reporttime", $("#reporttime").val());
+            form.append("reportuser", $("#reportuser").val());
+            form.append("monitorimg", $("#monitorImg")[0].files[0]);
+            form.append("csrfmiddlewaretoken", $("[name='csrfmiddlewaretoken']").val());
+            $.ajax({
+                url: "/staff/monitor/",
+                type: "post",
+                contentType: false,
+                processData: false,
+                data: form,
+                success: function (data) {
+                    alert("提交成功")
+                }
+            })
+        })
+    </script>
+{% endblock %}

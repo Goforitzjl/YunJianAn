@@ -1,0 +1,375 @@
+/*====== manage Page ======*/
+.pro{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.edit{
+    border: none;
+    background-color: white;
+}
+.information{
+    padding: 50px 0;
+}
+.information>div{
+    display: none;
+}
+.information>.show{
+    display: block;
+}
+/*====== ProjectInfo Box ======*/
+.proinf{
+    margin: 0px auto;
+}
+.proinf .item {
+    padding: 20px;
+}
+
+.proinf .item:nth-of-type(even) {
+    background: #fafafa;
+}
+
+.proinf h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 400;
+}
+
+.proinf .info {
+    font-size: 0.9em;
+    color: #868282;
+}
+/*====== departmentInfo Box ======*/
+.departInf{
+    margin: 0px auto;
+}
+.departInf .item {
+    padding: 20px;
+}
+
+.departInf .item:nth-of-type(even) {
+    background: #fafafa;
+}
+
+.departInf .icon {
+    margin-right: 10px;
+}
+
+.departInf h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 400;
+}
+
+.departInf p {
+    font-size: 0.8em;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+.departInf .info {
+    font-size: 0.9em;
+    color: #868282;
+}
+.departInf a {
+    color: inherit;
+    position: relative;
+    font-size: 0.9em;
+}
+.departInf a i {
+    font-size: 1.2em;
+    margin-right: 10px;
+    -webkit-transition: none;
+    transition: none;
+}
+.departInf ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-weight: 300;
+    border-left: 4px solid transparent;
+}
+.departInf ul li a:hover {
+    background: #d6d5de;
+    border-left: 4px solid #b5b4bb;
+    color: #fff;
+}
+.departInf ul li li a {
+    padding-left: 50px;
+    background: #EEF5F9;
+}
+.departInf a[data-toggle="collapse"]::before {
+    content: '\f104';
+    display: inline-block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+/*====== Monitor Box ======*/
+.monitor{
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.play{
+    position: relative;
+    height: 300px;
+}
+.play>.monitorInfo{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+/*====== staffMonitor Page ======*/
+.staffMonitor{
+    padding: 50px 0;
+}
+.staffMonitorImg>.card{
+    height: 300px;
+}
+.staffMonitor .btns{
+    display: flex;
+    justify-content: center;
+}
+.staffMonitor .btns button{
+    margin-right: 20px;
+}
+/*====== staffMonitorInfo Box ======*/
+.staffMonitorInfo{
+    margin: 0px auto;
+}
+.staffMonitorInfo .item {
+    padding: 20px;
+}
+
+.staffMonitorInfo .item:nth-of-type(even) {
+    background: #fafafa;
+}
+
+.staffMonitorInfo h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 400;
+}
+
+.staffMonitorInfo .info {
+    font-size: 0.9em;
+    color: #868282;
+}
+/*====== monitorCheck Page ======*/
+.monitorCheck{
+    padding: 50px 0;
+}
+/*====== staffMonitorInfo Box ======*/
+.checkInfo{
+    margin: 0px auto;
+}
+.checkInfo .item {
+    padding: 20px;
+}
+
+.checkInfo .item:nth-of-type(even) {
+    background: #fafafa;
+}
+
+.checkInfo h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 400;
+}
+
+.checkInfo .info {
+    font-size: 0.9em;
+    color: #868282;
+}
+.checkInfo .infoImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkInfo .infoImg img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: gainsboro;
+}
+.checkInfo button{
+    float: right;
+}
+/*====== staffManage Page ======*/
+/*====== staffInfo Box ======*/
+.staffInf{
+    margin: 0px auto;
+}
+.staffInf .item {
+    padding: 20px;
+}
+
+.staffInf .item:nth-of-type(even) {
+    background: #fafafa;
+}
+
+.staffInf .icon {
+    margin-right: 10px;
+}
+
+.staffInf h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 400;
+}
+
+.staffInf p {
+    font-size: 0.8em;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+.staffInf .info {
+    font-size: 0.9em;
+    color: #868282;
+}
+.staffInf a {
+    color: inherit;
+    position: relative;
+    font-size: 0.9em;
+}
+.staffInf a i {
+    font-size: 1.2em;
+    margin-right: 10px;
+    -webkit-transition: none;
+    transition: none;
+}
+.staffInf ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-weight: 300;
+    border-left: 4px solid transparent;
+}
+.staffInf ul li a:hover {
+    background: #d6d5de;
+    border-left: 4px solid #b5b4bb;
+    color: #fff;
+}
+.staffInf ul li li a {
+    padding-left: 50px;
+    background: #EEF5F9;
+}
+.staffInf a[data-toggle="collapse"]::before {
+    content: '\f104';
+    display: inline-block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+.staffmsg .card .card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.staffmsg .card .card-header img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: gainsboro;
+}
+/*====== kaoqin Box ======*/
+.kaoqin{
+    margin:0 auto;
+}
+.kaoqin .item {
+    padding: 20px;
+}
+
+.kaoqin .item:nth-of-type(even) {
+    background: #fafafa;
+}
+
+.kaoqin h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 400;
+}
+
+.kaoqin .info {
+    font-size: 0.9em;
+    color: #868282;
+}
+/*====== inform Box ======*/
+.inform{
+    margin:0px auto;
+}
+.inform .btns{
+    display: flex;
+    justify-content: center;
+}
+.inform .btns button{
+    margin-right: 20px;
+}
+/*====== news Box ======*/
+.news{
+    margin: 0px auto;
+}
+/*====== set Page ======*/
+.set{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.set div{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+}
+.set div button{
+    color: black;
+    font-size: 24px;
+    line-height: 50px;
+    text-decoration: none;
+}
+/*====== countInfo Box ======*/
+.countInfo{
+    margin:0 auto;
+}
+.countInfo .item {
+    padding: 20px;
+}
+
+.countInfo .item:nth-of-type(even) {
+    background: #fafafa;
+}
+
+.countInfo .icon {
+    margin-right: 10px;
+}
+
+.countInfo h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 400;
+}
+
+.countInfo p {
+    font-size: 0.8em;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+.countInfo .info {
+    font-size: 0.9em;
+    color: #868282;
+}
+.count{
+    margin: 30px auto;
+}

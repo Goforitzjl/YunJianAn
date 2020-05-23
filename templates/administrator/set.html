@@ -1,0 +1,121 @@
+{% extends "administrator/base.html" %}
+
+{% block LeftPanel %}
+    <li ><a href="/administrator/projmanage/"> <i class="fa fa-pencil"></i>项目管理</a></li>
+    <li><a href="/administrator/staffmonitor/"> <i class="fa fa-laptop"></i>员工监督</a></li>
+     <li ><a href="/administrator/reportInfo/"> <i class="fa fa-laptop"></i>举报信息</a></li>
+    <li><a href="/administrator/staffmanage/"> <i class="fa fa-list-ul"></i>员工管理</a></li>
+{#    <li><a href="/administrator/check/"> <i class="fa fa-gear"></i>校验 </a>#}
+    <li class="active"><a href="/administrator/set/"> <i class="fa fa-gear"></i>设置 </a>
+
+{% endblock %}
+
+{% block MainPanel %}
+    <div class="btn-group set" role="group" aria-label="...">
+        <button type="button" class="btn btn-default btn-lg">账号信息</button>
+        <button type="button" class="btn btn-default btn-lg">账号安全</button>
+    </div>
+    <div class="information container">
+        <!-- 账号信息-->
+        <div class="show countInfo col-lg-10">
+            <div class="card">
+{#                <div class="card-close">#}
+{#                    <div class="dropdown">#}
+{#                        <button type="button" id="closeCard1" class="edit"><i class="fa fa-gear"></i>编辑</button>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="card-header">
+                    <img src="" alt="">
+                </div>
+                <div class="card-body no-padding">
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>姓名</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ userinfo.name }}</div>
+                    </div>
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>id</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ userinfo.userid }}</div>
+                    </div>
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>性别</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ userinfo.gender }}</div>
+                    </div>
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>身份证号</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ userinfo.idcard }}</div>
+                    </div>
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>管理项目</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">
+                            {% for project in projects %}
+                                <span>{{ project.name }}</span><br>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>联系方式</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ userinfo.tel }}</div>
+                    </div>
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>工资卡号</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ userinfo.salaryid }}</div>
+                    </div>
+                    <!-- Item-->
+                    <!-- Item-->
+                    <div class="item d-flex justify-content-between">
+                        <div class="info d-flex">
+                            <div class="title">
+                                <h5>住址</h5>
+                            </div>
+                        </div>
+                        <div class="info text-right">{{ userinfo.address }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 账号安全信息-->
+        <div class="count col-lg-8">
+            <div class="card">
+                <div class="list-group">
+                    <a href="/updatecode/" class="list-group-item">修改密码</a>
+{#                    <a href="#" class="list-group-item">账号绑定</a>#}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

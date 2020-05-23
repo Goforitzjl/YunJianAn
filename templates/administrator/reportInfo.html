@@ -1,0 +1,142 @@
+{% extends "administrator/base.html" %}
+
+{% block LeftPanel %}
+    <li><a href="/administrator/projmanage/"> <i class="fa fa-pencil"></i>项目管理</a></li>
+    <li><a href="/administrator/staffmonitor/"> <i class="fa fa-laptop"></i>员工监督</a></li>
+    <li class="active"><a href="/administrator/reportInfo/"> <i class="fa fa-laptop"></i>举报信息</a></li>
+    <li><a href="/administrator/staffmanage/"> <i class="fa fa-list-ul"></i>员工管理</a></li>
+    {#    <li><a href="/administrator/check/"> <i class="fa fa-gear"></i>校验 </a>#}
+    <li><a href="/administrator/set/"> <i class="fa fa-gear"></i>设置 </a>
+
+{% endblock %}
+
+{% block MainPanel %}
+    <div class="monitorCheck">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="checkInfo col-lg-5">
+                    <div class="card">
+                        <img src="/media/{{ reportinfo.monitorimg }}" alt="加载失败
+">
+                    </div>
+                    {#                            <button class="btn btn-default">确认</button>#}
+                </div>
+                <div class="checkInfo col-lg-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="h4">举报信息</h3>
+                        </div>
+                        <div class="card-body no-padding">
+                            <!-- Item-->
+{#                            <div class="infoImg item">#}
+{#                                <div class="info d-flex">#}
+{#                                    <img src="/media/{{ reportinfo.monitorimg }}" alt="加载失败">#}
+{#                                </div>#}
+{#                            </div>#}
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>举报人姓名</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ reportinfo.reportuser }}</div>
+                            </div>
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>被举报人姓名</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ reportinfo.reporteduser }}</div>
+                            </div>
+                            <!-- Item-->
+                            <!-- Item-->
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>场地名称</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ reportinfo.placename }}</div>
+                            </div>
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>场地编号</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ reportinfo.placeid }}</div>
+                            </div>
+                            <div class="item d-flex justify-content-between">
+                                <div class="info d-flex">
+                                    <div class="title">
+                                        <h5>举报时间</h5>
+                                    </div>
+                                </div>
+                                <div class="info text-right">{{ reportinfo.reportdate }}</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    {#                            <button class="btn btn-default">确认</button>#}
+                </div>
+                {#                        <div class="checkInfo col-lg-5">#}
+                {#                            <div class="card">#}
+                {#                                <div class="card-header">#}
+                {#                                    <h3 class="h4">被举报人员信息</h3>#}
+                {#                                </div>#}
+                {#                                <div class="card-body no-padding">#}
+                {#                                    <!-- Item-->#}
+                {#                                    <div class="infoImg item">#}
+                {#                                        <div class="info d-flex">#}
+                {#                                            <img src="" alt="" >#}
+                {#                                        </div>#}
+                {#                                    </div>#}
+                {#                                    <!-- Item-->#}
+                {#                                    <div class="item d-flex justify-content-between">#}
+                {#                                        <div class="info d-flex">#}
+                {#                                            <div class="title">#}
+                {#                                                <h5>姓名</h5>#}
+                {#                                            </div>#}
+                {#                                        </div>#}
+                {#                                        <div class="info text-right">XXXXXXXXX</div>#}
+                {#                                    </div>#}
+                {#                                    <!-- Item-->#}
+                {#                                    <div class="item d-flex justify-content-between">#}
+                {#                                        <div class="info d-flex">#}
+                {#                                            <div class="title">#}
+                {#                                                <h5>id</h5>#}
+                {#                                            </div>#}
+                {#                                        </div>#}
+                {#                                        <div class="info text-right">888888</div>#}
+                {#                                    </div>#}
+                {#                                    <!-- Item-->#}
+                {#                                    <div class="item d-flex justify-content-between">#}
+                {#                                        <div class="info d-flex">#}
+                {#                                            <div class="title">#}
+                {#                                                <h5>所属部门</h5>#}
+                {#                                            </div>#}
+                {#                                        </div>#}
+                {#                                        <div class="info text-right">666666</div>#}
+                {#                                    </div>#}
+                {#                                    <!-- Item-->#}
+                {#                                    <div class="item d-flex justify-content-between">#}
+                {#                                        <div class="info d-flex">#}
+                {#                                            <div class="title">#}
+                {#                                                <h5>奖励</h5>#}
+                {#                                            </div>#}
+                {#                                        </div>#}
+                {#                                        <div class="info text-right">XXXXXXXXX</div>#}
+                {#                                    </div>#}
+                {##}
+                {#                                </div>#}
+                {#                            </div>#}
+                {#                            <button class="btn btn-default">确认</button>#}
+                {#                        </div>#}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,118 @@
+/*====== staffMonitor Page ======*/
+.staffMonitor {
+    padding: 50px 0;
+}
+
+.staffMonitorImg > .card {
+    height: 300px;
+}
+
+.staffMonitor .btn {
+    display: flex;
+    justify-content: center;
+}
+
+.edit {
+    border: none;
+    background-color: white;
+}
+
+/*====== staffMonitorInfo Box ======*/
+.staffMonitorInfo {
+    margin: 0px auto;
+}
+
+.staffMonitorInfo .item {
+    padding: 20px;
+}
+
+.staffMonitorInfo .item:nth-of-type(even) {
+    background: #fafafa;
+}
+
+.staffMonitorInfo h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 400;
+}
+
+.staffMonitorInfo .info {
+    font-size: 0.9em;
+    color: #868282;
+}
+
+/*====== salary Page ======*/
+.salary {
+    padding: 50px 0;
+}
+
+.salary .btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.salary .btns button {
+    margin-bottom: 30px;
+}
+
+/*====== salaryInfo Box ======*/
+.salaryInfo {
+    margin: 0px auto;
+}
+
+.salaryInfo .item {
+    padding: 20px;
+}
+
+.salaryInfo .number {
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #555;
+    margin: 35px 0;
+}
+
+.salaryInfo .item:nth-of-type(even) {
+    background: #fafafa;
+}
+
+.salaryInfo h5 {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 400;
+}
+
+.salaryInfo .info {
+    font-size: 0.9em;
+    color: #868282;
+}
+
+/*====== inform Page ======*/
+.news {
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+/*====== set Page ======*/
+.set {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.set div {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.set div button {
+    color: black;
+    font-size: 24px;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+
