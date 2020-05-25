@@ -48,7 +48,7 @@
                                     <td>{{ salary.socialsecurity }}</td>
                                     <td>{{ salary.tax }}</td>
                                     <td>{{ salary.insurances }}</td>
-                                    <td>{{ salary.publishment }}</td>
+                                    <td><a href="/firm/{{ salary.user.name }}/"{{ salary.user.name}}>{{ salary.publishment }}</a></td>
                                     <td>{{ salary.performance }}</td>
                                     <td>{{ salary.finalsalary }}</td>
                                 </tr>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-{#            <button class="col-sm-3 next btn btn-default">发送</button>#}
+            {#            <button class="col-sm-3 next btn btn-default">发送</button>#}
         </div>
     </div>
 {% endblock %}

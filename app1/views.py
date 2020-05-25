@@ -192,10 +192,23 @@ def administrator(request, keyword):
         return render(request, "administrator/staffManage.html",
                       {"user": loginUser, "notices": notices, "userdict1": userdict1, "userdict2": userdict2})
 
-
     elif keyword == "reportInfo/":
-        reportinfo=MonitorInfomation.objects.all().first()
-        return render(request, "administrator/reportInfo.html", {"user": request.user,"reportinfo":reportinfo})
+        infoList=MonitorInfomation.objects.all()
+        return render(request,"administrator/reportList.html",{"infoList":infoList})
+
+    elif keyword == "user/":
+        print("keyword",keyword)
+        reportinfo = MonitorInfomation.objects.filter(reporteduser="user").first()
+        return render(request, "administrator/reportInfo.html", {"user": request.user, "reportinfo": reportinfo})
+    elif keyword == "firmuser/":
+        print("keyword",keyword)
+        reportinfo = MonitorInfomation.objects.filter(reporteduser="firmuser").first()
+        return render(request, "administrator/reportInfo.html", {"user": request.user, "reportinfo": reportinfo})
+
+    # elif keyword == "reportInfo/":
+    #     reportinfo = MonitorInfomation.objects.all().first()
+    #     return render(request, "administrator/reportInfo.html", {"user": request.user, "reportinfo": reportinfo})
+
     elif keyword == "set/":
         userinfo = User.objects.filter(nid=loginUser.user_id).first()
         users = User.objects.filter(nid=loginUser.nid).first()
@@ -242,6 +255,16 @@ def firm(request, keyword):
         salarydate = datetime.strptime(date, "%Y-%m-%d")
         salaryinfos = Salary.objects.filter(belongmonth=salarydate)
         return render(request, "firm/salarydetail.html", {"salaryinfos": salaryinfos})
+    elif keyword == "user/":
+        print("keyword", keyword)
+        publishdetail = MonitorInfomation.objects.filter(reporteduser="user").first()
+        print("publishdetail", type(publishdetail))
+        return render(request, "firm/publishdetail.html", {"reportinfo": publishdetail})
+        # return HttpResponse("ok")
+    elif keyword == "firmuser/":
+        publishdetail = MonitorInfomation.objects.filter(reporteduser="firmuser").first()
+        print("publishdetail", type(publishdetail))
+        return render(request, "firm/publishdetail.html", {"reportinfo": publishdetail})
 
 
 def introduce(request):
