@@ -180,29 +180,34 @@ def administrator(request, keyword):
             return JsonResponse(response)
         userdict1 = []
         userdict2 = []
+        userdict3=[]
         userList1 = User.objects.filter(department_id=1).all()
         userList2 = User.objects.filter(department_id=2).all()
+        userList3 = User.objects.filter(department_id=3).all()
         for user1 in userList1:
             userdict1.append(user1)
         for user2 in userList2:
             userdict2.append(user2)
+        for user3 in userList3:
+            userdict3.append(user3)
 
         datas = Notice.objects.all()
         notices = datas[datas.count() - 5:datas.count()]  # 获取最新的五条通知
         return render(request, "administrator/staffManage.html",
-                      {"user": loginUser, "notices": notices, "userdict1": userdict1, "userdict2": userdict2})
+                      {"user": loginUser, "notices": notices,
+                       "userdict1": userdict1, "userdict2": userdict2,"userdict3":userdict3})
 
     elif keyword == "reportInfo/":
         infoList=MonitorInfomation.objects.all()
         return render(request,"administrator/reportList.html",{"infoList":infoList})
 
-    elif keyword == "user/":
+    elif keyword == "李杰/":
         print("keyword",keyword)
-        reportinfo = MonitorInfomation.objects.filter(reporteduser="user").first()
+        reportinfo = MonitorInfomation.objects.filter(reporteduser="李杰").first()
         return render(request, "administrator/reportInfo.html", {"user": request.user, "reportinfo": reportinfo})
-    elif keyword == "firmuser/":
+    elif keyword == "王刚/":
         print("keyword",keyword)
-        reportinfo = MonitorInfomation.objects.filter(reporteduser="firmuser").first()
+        reportinfo = MonitorInfomation.objects.filter(reporteduser="王刚").first()
         return render(request, "administrator/reportInfo.html", {"user": request.user, "reportinfo": reportinfo})
 
     # elif keyword == "reportInfo/":

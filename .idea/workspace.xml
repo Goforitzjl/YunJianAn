@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3412dad1-c357-476f-b559-48c1fd0fe91c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/MonitorImg/report2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app1/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app1/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/administrator/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administrator/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/administrator/projmanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administrator/projmanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/firm/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/firm/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administrator/set.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administrator/set.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/administrator/staffManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/administrator/staffManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/firm/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/firm/project.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/firm/salarydetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/firm/salarydetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/staff/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/staff/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/staff/set.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/staff/set.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,7 @@
         <item name="Project@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="project: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="app1_monitorinfomation: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="app1_user: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -66,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app1/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="204" column="86" selection-start-line="204" selection-start-column="86" selection-end-line="204" selection-end-column="86" />
+            <state relative-caret-position="166">
+              <caret line="209" column="70" selection-start-line="209" selection-start-column="70" selection-end-line="209" selection-end-column="70" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
                 <element signature="e#382#1264#0" />
@@ -77,36 +77,25 @@
                 <element signature="e#2646#3479#0" />
                 <element signature="e#3506#3825#0" />
                 <element signature="e#3861#5567#0" />
+                <element signature="e#9628#11840#0" />
+                <element signature="e#11871#11911#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app1/tests.py">
+        <entry file="file://$PROJECT_DIR$/templates/firm/set.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
+            <state relative-caret-position="-630" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_monitorinfomation">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true">
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/administrator/reportList.html">
+        <entry file="file://$PROJECT_DIR$/templates/staff/set.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            <state relative-caret-position="240">
+              <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -141,13 +130,10 @@
         <option value="$PROJECT_DIR$/static/web/css/staff.css" />
         <option value="$PROJECT_DIR$/templates/staff/salary.html" />
         <option value="$PROJECT_DIR$/templates/staff/inform.html" />
-        <option value="$PROJECT_DIR$/templates/staff/set.html" />
         <option value="$PROJECT_DIR$/app1/test.py" />
         <option value="$PROJECT_DIR$/templates/administrator/check.html" />
-        <option value="$PROJECT_DIR$/app1/models.py" />
         <option value="$PROJECT_DIR$/templates/firm/set.html" />
         <option value="$PROJECT_DIR$/templates/firm/salary.html" />
-        <option value="$PROJECT_DIR$/templates/firm/project.html" />
         <option value="$PROJECT_DIR$/static/web/css/base.css" />
         <option value="$PROJECT_DIR$/static/web/css/vendor.css" />
         <option value="$PROJECT_DIR$/static/web/css/main.css" />
@@ -162,26 +148,29 @@
         <option value="$PROJECT_DIR$/app1/self_functions/valid_image_function.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/templates/staff/monitor.html" />
-        <option value="$PROJECT_DIR$/templates/administrator/set.html" />
-        <option value="$PROJECT_DIR$/templates/administrator/staffManage.html" />
         <option value="$PROJECT_DIR$/templates/administrator/staffMonitor.html" />
         <option value="$PROJECT_DIR$/templates/administrator/reportInfo.html" />
         <option value="$PROJECT_DIR$/templates/introduce.html" />
-        <option value="$PROJECT_DIR$/templates/firm/salarydetail.html" />
         <option value="$PROJECT_DIR$/templates/firm/publishdetail.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/staff/base.html" />
         <option value="$PROJECT_DIR$/templates/administrator/base.html" />
         <option value="$PROJECT_DIR$/templates/firm/base.html" />
-        <option value="$PROJECT_DIR$/templates/administrator/projmanage.html" />
         <option value="$PROJECT_DIR$/templates/administrator/reportList.html" />
+        <option value="$PROJECT_DIR$/app1/models.py" />
+        <option value="$PROJECT_DIR$/templates/firm/salarydetail.html" />
+        <option value="$PROJECT_DIR$/templates/firm/project.html" />
+        <option value="$PROJECT_DIR$/templates/administrator/projmanage.html" />
+        <option value="$PROJECT_DIR$/templates/administrator/set.html" />
+        <option value="$PROJECT_DIR$/templates/administrator/staffManage.html" />
         <option value="$PROJECT_DIR$/app1/views.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/templates/staff/set.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-17" />
-    <option name="y" value="38" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-19" />
+    <option name="y" value="36" />
     <option name="width" value="1940" />
     <option name="height" value="915" />
   </component>
@@ -207,24 +196,13 @@
             <path>
               <item name="Proj" type="b2602c69:ProjectViewProjectNode" />
               <item name="Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Proj" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Proj" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Proj" type="b2602c69:ProjectViewProjectNode" />
               <item name="Proj" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="firm" type="462c0819:PsiDirectoryNode" />
+              <item name="staff" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -352,11 +330,13 @@
       <workItem from="1590239796474" duration="2121000" />
       <workItem from="1590243189660" duration="2483000" />
       <workItem from="1590389022445" duration="9359000" />
+      <workItem from="1590417911877" duration="2573000" />
+      <workItem from="1590466253265" duration="4248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169545000" />
+    <option name="totallyTimeSpent" value="176366000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -368,14 +348,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20939597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.49483013" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28064993" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -384,7 +365,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293944" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.072378136" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.12998523" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3107511" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3298969" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -392,7 +373,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Key Promoter X" order="4" weight="0.3295302" />
-      <window_info anchor="right" id="Database" order="5" weight="0.19731544" />
+      <window_info anchor="right" id="Database" order="5" weight="0.20872483" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20939597" />
@@ -438,80 +419,6 @@
     <SUITE FILE_PATH="coverage/Proj$test.coverage" NAME="test Coverage Results" MODIFIED="1589879027151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app1/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_salary">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_company">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/firm/set.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_project">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/web/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26897">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/web/css/vendor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-990">
-          <caret line="135" column="26" lean-forward="true" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/web/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="4084" lean-forward="true" selection-start-line="4084" selection-end-line="4084" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/web/js/plugins.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="610">
@@ -595,31 +502,6 @@
     <entry file="file://$PROJECT_DIR$/media/MonitorImg/upPicture.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/staff/monitor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding>
-            <element signature="n#block#0;n#!!top" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administrator/set.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administrator/staffManage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/web/img/bg.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -648,17 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="197" column="54" lean-forward="true" selection-start-line="197" selection-start-column="54" selection-end-line="197" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/firm/project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="106" column="14" lean-forward="true" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
-          <folding>
-            <element signature="n#block#0;n#!!top" />
-            <element signature="n#block#1;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/firm/salarydetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="50" column="78" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/MonitorImg/report2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -739,28 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administrator/projmanage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding>
-            <element signature="e#994#4521#0#HTML" />
-            <element signature="e#4551#8266#0#HTML" />
-            <element signature="e#8296#14534#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administrator/reportInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" />
-          <folding>
-            <element signature="e#607#628#0#DjangoTemplate" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/staff/inform.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -771,34 +613,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/administrator/reportList.html">
+    <entry file="file://$PROJECT_DIR$/app1/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        <state relative-caret-position="90">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app1/views.py">
+    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_salary">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/staff/monitor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="204" column="86" selection-start-line="204" selection-start-column="86" selection-end-line="204" selection-end-column="86" />
+        <state relative-caret-position="-2299">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#382#1264#0" />
-            <element signature="e#1296#2326#0" />
-            <element signature="e#2354#2405#0" />
-            <element signature="e#2442#2616#0" />
-            <element signature="e#2646#3479#0" />
-            <element signature="e#3506#3825#0" />
-            <element signature="e#3861#5567#0" />
+            <element signature="n#block#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app1/tests.py">
+    <entry file="file://$PROJECT_DIR$/templates/firm/salarydetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="194">
+          <caret line="45" column="69" lean-forward="true" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app1/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/firm/project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="75" column="67" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
+          <folding>
+            <element signature="n#block#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_projectplace">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_company">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_project">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_departmemt">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administrator/set.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97bd1ebd-0cdf-4c74-b0f7-faa6a43820b0/schema/project/table/app1_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administrator/projmanage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2700">
+          <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administrator/staffManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="98" column="30" lean-forward="true" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administrator/reportInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/administrator/reportList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -808,6 +752,37 @@
           <filtering enabled="true">
             <filter text="" />
           </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app1/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="209" column="70" selection-start-line="209" selection-start-column="70" selection-end-line="209" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#382#1264#0" />
+            <element signature="e#1296#2326#0" />
+            <element signature="e#2354#2405#0" />
+            <element signature="e#2442#2616#0" />
+            <element signature="e#2646#3479#0" />
+            <element signature="e#3506#3825#0" />
+            <element signature="e#3861#5567#0" />
+            <element signature="e#9628#11840#0" />
+            <element signature="e#11871#11911#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/firm/set.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/staff/set.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
         </state>
       </provider>
     </entry>

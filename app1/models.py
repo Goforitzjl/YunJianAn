@@ -8,6 +8,7 @@ class User(models.Model):
     address = models.CharField(verbose_name="家庭住址", max_length=64, null=True)
     userid = models.CharField(verbose_name="员工编号", max_length=32, null=True)
     name = models.CharField(verbose_name="姓名", max_length=32, null=True)
+    uname=models.CharField(verbose_name="真实姓名",max_length=32,null=True)
     personid = models.IntegerField(verbose_name="员工编号", null=True)
     idcard = models.CharField(verbose_name="身份证号码", max_length=256, null=True)
     salaryid = models.CharField(verbose_name="工资卡卡号", max_length=256, null=True)
@@ -15,6 +16,7 @@ class User(models.Model):
     gender = models.CharField(verbose_name="性别", max_length=10, null=True)
     introducerid = models.IntegerField(verbose_name="引入人号码", default=0, null=True)
     create_time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True, null=True)
+
     department = models.ForeignKey(verbose_name="所属部门", to="Departmemt", to_field="nid", on_delete=models.CASCADE,
                                    null=True)
 

@@ -83,7 +83,7 @@
                                 </ul>
                             </li>
                             <li><a href="#department3" aria-expanded="false" data-toggle="collapse"> <i
-                                    class="icon-interface-windows"></i>部门二</a>
+                                    class="icon-interface-windows"></i>部门三</a>
                                 <ul id="department3" class="collapse list-unstyled ">
                                     <li>
                                         <button id="3-1" class="btn btn-primary btn-lg btn-block"
@@ -144,7 +144,7 @@
                                         <h5>性别</h5>
                                     </div>
                                 </div>
-                                <div class="info text-right" id="usergender">888888</div>
+                                <div class="info text-right" id="usergender"></div>
                             </div>
                             <div class="item d-flex justify-content-between">
                                 <div class="info d-flex">
@@ -278,10 +278,10 @@
         $("#1-1").click(function () {
             {#alert("{{ userdict1.0.name }}");#}
             {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
-            $("#username").text("{{ userdict1.0.name }}");
+            $("#username").text("{{ userdict1.0.uname }}");
             $("#userid").text("{{ userdict1.0.userid }}");
             $("#usergender").text("{{ userdict1.0.gender }}");
-            $('#did').text("{{ userdict1.0.department_id }}");
+            $('#did').text("{{ userdict1.0.department.name }}");
             $("#intime").text("{{ userdict1.0.create_time |date:"Y-m-d"}}");
             $("#introducer").text("{{ userdict1.0.introducerid }}");
             $("#salaryid").text("{{ userdict1.0.salaryid }}");
@@ -290,10 +290,10 @@
         $("#1-2").click(function () {
             {#alert("{{ userdict1.0.name }}");#}
             {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
-            $("#username").text("{{ userdict1.1.name }}");
+            $("#username").text("{{ userdict1.1.uname }}");
             $("#userid").text("{{ userdict1.1.userid }}");
             $("#usergender").text("{{ userdict1.1.gender }}");
-            $('#did').text("{{ userdict1.1.department_id }}");
+            $('#did').text("{{ userdict1.1.department.name }}");
             $("#intime").text("{{ userdict1.1.create_time |date:"Y-m-d"}}");
             $("#introducer").text("{{ userdict1.1.introducerid }}");
             $("#salaryid").text("{{ userdict1.1.salaryid }}");
@@ -302,10 +302,10 @@
         $("#1-3").click(function () {
             {#alert("{{ userdict1.0.name }}");#}
             {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
-            $("#username").text("{{ userdict1.2.name }}");
+            $("#username").text("{{ userdict1.2.uname }}");
             $("#userid").text("{{ userdict1.2.userid }}");
             $("#usergender").text("{{ userdict1.2.gender }}");
-            $('#did').text("{{ userdict1.2.department_id }}");
+            $('#did').text("{{ userdict1.2.department.name }}");
             $("#intime").text("{{ userdict1.2.create_time |date:"Y-m-d"}}");
             $("#introducer").text("{{ userdict1.2.introducerid }}");
             $("#salaryid").text("{{ userdict1.2.salaryid }}");
@@ -313,10 +313,10 @@
         $("#2-1").click(function () {
             {#alert("{{ userdict1.0.name }}");#}
             {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
-            $("#username").text("{{ userdict2.0.name }}");
+            $("#username").text("{{ userdict2.0.uname }}");
             $("#userid").text("{{ userdict2.0.userid }}");
             $("#usergender").text("{{ userdict2.0.gender }}");
-            $('#did').text("{{ userdict2.0.department_id }}");
+            $('#did').text("{{ userdict2.0.department.name }}");
             $("#intime").text("{{ userdict2.0.create_time |date:"Y-m-d"}}");
             $("#introducer").text("{{ userdict2.0.introducerid }}");
             $("#salaryid").text("{{ userdict2.0.salaryid }}");
@@ -325,10 +325,10 @@
         $("#2-2").click(function () {
             {#alert("{{ userdict1.0.name }}");#}
             {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
-            $("#username").text("{{ userdict2.1.name }}");
+            $("#username").text("{{ userdict2.1.uname }}");
             $("#userid").text("{{ userdict2.1.userid }}");
             $("#usergender").text("{{ userdict2.1.gender }}");
-            $('#did').text("{{ userdict2.1.department_id }}");
+            $('#did').text("{{ userdict2.1.department.name }}");
             $("#intime").text("{{ userdict2.1.create_time |date:"Y-m-d"}}");
             $("#introducer").text("{{ userdict2.1.introducerid }}");
             $("#salaryid").text("{{ userdict2.1.salaryid }}");
@@ -337,10 +337,10 @@
         $("#2-3").click(function () {
             {#alert("{{ userdict1.0.name }}");#}
             {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
-            $("#username").text("{{ userdict2.2.name }}");
+            $("#username").text("{{ userdict2.2.uname }}");
             $("#userid").text("{{ userdict2.2.userid }}");
             $("#usergender").text("{{ userdict2.2.gender }}");
-            $('#did').text("{{ userdict2.2.department_id }}");
+            $('#did').text("{{ userdict2.2.department.name }}");
             $("#intime").text("{{ userdict2.2.create_time |date:"Y-m-d"}}");
             $("#introducer").text("{{ userdict2.2.introducerid }}");
             $("#salaryid").text("{{ userdict2.2.salaryid }}");
@@ -349,10 +349,10 @@
         $("#3-1").click(function () {
             {#alert("{{ userdict1.0.name }}");#}
             {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
-            $("#username").text("{{ userdict3.0.name }}");
+            $("#username").text("{{ userdict3.0.uname }}");
             $("#userid").text("{{ userdict3.0.userid }}");
             $("#usergender").text("{{ userdict3.0.gender }}");
-            $('#did').text("{{ userdict3.0.department_id }}");
+            $('#did').text("{{ userdict3.0.department.name }}");
             $("#intime").text("{{ userdict3.0.create_time |date:"Y-m-d"}}");
             $("#introducer").text("{{ userdict3.0.introducerid }}");
             $("#salaryid").text("{{ userdict3.0.salaryid }}");
@@ -361,10 +361,10 @@
         $("#3-2").click(function () {
             {#alert("{{ userdict1.0.name }}");#}
             {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
-            $("#username").text("{{ userdict3.1.name }}");
+            $("#username").text("{{ userdict3.1.uname }}");
             $("#userid").text("{{ userdict3.1.userid }}");
             $("#usergender").text("{{ userdict3.1.gender }}");
-            $('#did').text("{{ userdict3.1.department_id }}");
+            $('#did').text("{{ userdict3.1.department.name }}");
             $("#intime").text("{{ userdict3.1.create_time |date:"Y-m-d"}}");
             $("#introducer").text("{{ userdict3.1.introducerid }}");
             $("#salaryid").text("{{ userdict3.1.salaryid }}");
@@ -373,10 +373,10 @@
               $("#3-3").click(function () {
             {#alert("{{ userdict1.0.name }}");#}
             {#                    $("#userid").val("{{ userdict1.0.userid }}"); 就不可以    #}
-            $("#username").text("{{ userdict3.2.name }}");
+            $("#username").text("{{ userdict3.2.uname }}");
             $("#userid").text("{{ userdict3.2.userid }}");
             $("#usergender").text("{{ userdict3.2.gender }}");
-            $('#did').text("{{ userdict3.2.department_id }}");
+            $('#did').text("{{ userdict3.2.department.name }}");
             $("#intime").text("{{ userdict3.2.create_time |date:"Y-m-d"}}");
             $("#introducer").text("{{ userdict3.2.introducerid }}");
             $("#salaryid").text("{{ userdict3.2.salaryid }}");
