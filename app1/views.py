@@ -262,12 +262,12 @@ def firm(request, keyword):
         return render(request, "firm/salarydetail.html", {"salaryinfos": salaryinfos})
     elif keyword == "user/":
         print("keyword", keyword)
-        publishdetail = MonitorInfomation.objects.filter(reporteduser="user").first()
+        publishdetail = MonitorInfomation.objects.filter(reporteduser="李杰").first()
         print("publishdetail", type(publishdetail))
         return render(request, "firm/publishdetail.html", {"reportinfo": publishdetail})
         # return HttpResponse("ok")
     elif keyword == "firmuser/":
-        publishdetail = MonitorInfomation.objects.filter(reporteduser="firmuser").first()
+        publishdetail = MonitorInfomation.objects.filter(reporteduser="王刚").first()
         print("publishdetail", type(publishdetail))
         return render(request, "firm/publishdetail.html", {"reportinfo": publishdetail})
 
